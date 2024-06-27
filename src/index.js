@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Layout from "./pages/Layout";
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -23,7 +23,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>} />
@@ -34,7 +34,7 @@ export default function App() {
         </Route>
       </Routes>
       <ToastContainer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
